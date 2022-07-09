@@ -61,7 +61,7 @@ card.on('change',({error}) => {
 
 const submitBtn = document.getElementById('payment-form-submit');
 
-submitBtn.addEventListener('click',function(event){
+submitBtn.addEventListener('click',function(event){ //eventオブジェクトのerrorプロパティだけ取り出している
     displaySpinner();
     stripe.createPaymentMethod('card', card)
     .then( (result) => {
